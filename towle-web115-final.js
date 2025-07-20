@@ -1,8 +1,7 @@
 // create user tasks array
 let taskArray = [];
 
-// user inputs task including name, priority drop down, importance checkbox, 
-// completion checkbox, date, submit
+// create task array item with id, name, priority, importance, complete, and date
 function addTask() {
     let id = idCounter();
     let taskName = document.getElementById("taskName").value.trim();
@@ -20,25 +19,26 @@ function addTask() {
     displayTasks();
 
 }
-    
+
+// create counter for id attribute 
 let count = 0;
 function idCounter(){
     count++;
     return count
 }
 
-// display task list 
+// create functin to display task list 
 function displayTasks(){
     let taskList = "";
     for (let i = 0; i < taskArray.length; i++){
         let task = taskArray[i];
         
-        // create variables to determine CSS class
+        // create variables to determine which CSS class to apply
         let completedClass = task.isCompleted ? "completed" : "";
         let importantClass = task.isImportant ? "important" : "";
         let taskClass = `${completedClass} ${importantClass}`;
 
-        // 
+        // create html to display each item in the task array
         taskList += `<div class="${taskClass}">
             ${task.name}&ensp;&ensp;Priority: ${task.priority}&ensp;&ensp; 
             ${task.date.toLocaleString()}&ensp;&ensp; 
