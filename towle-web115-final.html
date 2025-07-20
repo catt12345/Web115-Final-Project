@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <title>TaskFlow Task Manager</title>
+    <style>
+        .completed {
+            text-decoration: line-through;
+            color: #006400;
+        }
+
+        .important {
+            background-color: #F08080;
+        }
+
+        body {
+            background-color: #F0F8FF;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task Manager</h1>
+    <h4>Demo created by Carrington Towle for TaskFlow Solutions</h4>
+    <h5>Add a task below. Use the priority dropdown and important checkbox to categorize your tasks.</h5>
+    <label>Task Name: <input type="text" id="taskName" required></label>&ensp;
+    <label for="priority">Priority</label>&ensp;
+    <select name="priority" id="priority">
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+    </select>&ensp;
+    <label>Important <input type="checkbox" id="important"></label><br><br>
+
+    <button id="submit">Submit Task</button>
+    <hr>
+    <h4>Tasks</h4>
+    <div id="notes"></div>
+    <div id="taskList"></div>    
+
+    <script src="towle-web115-final.js" defer></script>
+</body>
