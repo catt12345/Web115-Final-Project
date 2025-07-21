@@ -51,7 +51,7 @@ function displayTasks(){
             <button class="deleteButton" data-id="${task.id}">Delete Task</button> <hr>
         </div>`;
 
-    document.getElementById("taskList").innerHTML = taskList;
+    document.getElementById("taskmanager").innerHTML = taskList;
 
     // display notes when the task list is not empty
     let note = `<h5>Use the Complete checkbox and Delete button to manage your task list.</h5>`
